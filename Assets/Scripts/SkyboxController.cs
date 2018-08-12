@@ -6,7 +6,7 @@ using Zenject;
 public class SkyboxController : MonoBehaviour
 {
     public List<Image> images;
-    public Texture2D blackSky, whiteSky;
+    public Texture blackSky, whiteSky;
     public Transform matchZ;
     List<SkyboxSettings> settings;
 
@@ -51,10 +51,14 @@ public class SkyboxController : MonoBehaviour
 
     void OnChangeColor(SignalChangeColors args)
     {
-        Texture2D toSet = args.color == Color.black ? blackSky : whiteSky;
+        Texture toSet;
+        if (args.color == Color.black)
+            toSet = blackSky;
+        else
+            toSet = whiteSky;
 
         for (int i = 0; i < images.Count; i++)
-            images[i].material.SetTexture("Texture2D_D517DB89", toSet);
+            images[i].material.SetTexture("_MainTex", toSet);
     }
 
     public void NextLevel()

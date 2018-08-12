@@ -6,7 +6,7 @@ public class ScoreController : MonoBehaviour
 {
     [Inject]
     readonly SignalBus _signalBus;
-    Text txt;
+    public Text txt;
     public float score;
 
     private void OnValidate()
@@ -21,6 +21,7 @@ public class ScoreController : MonoBehaviour
 
     private void Start()
     {
+        score = 0;
         txt.text = score.ToString();
         _signalBus.Subscribe<SignalIncreaseScore>(IncreaseScore);
         _signalBus.Subscribe<SignalGameState>(Reset);

@@ -50,10 +50,15 @@ public class GameManager : MonoBehaviour
         _signalBus.Fire(new SignalChangeColors() { color = globalColor });
     }
 
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
+
     private void Start()
     {
         cam = Camera.main;
-        globalColor = Color.black;
+        globalColor = Color.white;
         ChangeColor();
     }
 }

@@ -13,7 +13,7 @@ public class ScreenController : MonoBehaviour
     [Inject]
     ScoreController sc;
 
-    Image img;
+    public Image img;
     public List<Text> texts;
     bool isPlaying;
 
@@ -37,7 +37,6 @@ public class ScreenController : MonoBehaviour
     {
         if (args.isPlaying == false)
         {
-
             img.DOFade(1, 1f);
             texts[0].text = "Score: " + sc.score.ToString("0");
             foreach (var txt in texts)

@@ -4,7 +4,7 @@ using Zenject;
 
 public class TimerController : MonoBehaviour
 {
-    Text txt;
+    public Text txt;
     bool isPlaying = false;
     float startTime;
 

@@ -18,8 +18,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_D517DB89:
+    - Texture2D_44DBBF89:
         m_Texture: {fileID: 2800000, guid: bf38bc40680dccf41961c91210e26675, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_BEEE2B0E:
+        m_Texture: {fileID: 2800000, guid: bf38bc40680dccf41961c91210e26675, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_D517DB89:
+        m_Texture: {fileID: 2800000, guid: 13d7a79fd3597ab418d8ac86e0b83e52, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BackTex:
@@ -59,7 +67,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 13d7a79fd3597ab418d8ac86e0b83e52, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -88,6 +96,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_29D75A7C: 0.3
+    - Vector1_4AE9244A: 0.3
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -111,8 +120,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_5A27677A: {r: 0, g: 0, b: 0, a: 0}
     - Color_E0B3EB1A: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_63B1780A: {r: 1.2, g: 1.5, b: 0, a: 0}
+    - Vector2_6DED80A1: {r: 0.3, g: 0, b: 0, a: 0}
+    - Vector2_7CB5AD58: {r: 1.5, g: 1.5, b: 0, a: 0}
     - Vector2_7F7308D7: {r: 0.6, g: 0, b: 0, a: 0}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
