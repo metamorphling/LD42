@@ -23,6 +23,7 @@ public class ScoreController : MonoBehaviour
     {
         txt.text = score.ToString();
         _signalBus.Subscribe<SignalIncreaseScore>(IncreaseScore);
+        _signalBus.Subscribe<SignalGameState>(Reset);
     }
 
     void IncreaseScore(SignalIncreaseScore args)
