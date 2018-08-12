@@ -26,6 +26,7 @@ public class PlaneController : MonoBehaviour
     bool isJumping = false;
     bool isPlaying = false;
     float defaultVerticalSpeed = 0f;
+    int starter = 0;
 
     void Start()
     {
@@ -53,7 +54,8 @@ public class PlaneController : MonoBehaviour
             return;
 
         force += Input.GetAxis("Horizontal") * horizontalSpeed;
-        directForce += Input.GetAxis("Vertical") * verticalSpeed;
+        //directForce += Input.GetAxis("Vertical") * verticalSpeed;
+        directForce += starter * verticalSpeed;
 
         if (readyToJump == true)
         {
@@ -108,6 +110,7 @@ public class PlaneController : MonoBehaviour
         if (reenable == true)
         {
             moveBlock = false;
+            starter = 1;
             StartCoroutine(trailON());
         }
     }
